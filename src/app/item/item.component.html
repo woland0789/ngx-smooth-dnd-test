@@ -1,0 +1,13 @@
+<smooth-dnd-container
+  class="drop-list"
+  [groupName]="'1'"
+  (drop)="onDrop($event)"
+  [getChildPayload]="getChildPayload()"
+  [dragClass]="'opacity-ghost'"
+  [dropClass]="'opacity-ghost-drop'"
+>
+  <smooth-dnd-draggable class="drag-item" *ngFor="let item of items">
+    <div>{{ item.name }}</div>
+    <app-item [items]="item.items"></app-item>
+  </smooth-dnd-draggable>
+</smooth-dnd-container>

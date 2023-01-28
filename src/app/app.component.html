@@ -1,0 +1,15 @@
+<div class="container">
+  <smooth-dnd-container class="drop-list drop-list__left" [groupName]="'1'" [getChildPayload]="getChildPayload1()">
+    <smooth-dnd-draggable class="drag-item" *ngFor="let item of items">
+      {{ item.name }}
+    </smooth-dnd-draggable>
+  </smooth-dnd-container>
+
+  <div class="drop-list__right">
+    <div class="list-header">
+      <span class="column-drag-handle">☰</span>
+      Right
+    </div>
+    <app-item [items]="items2"></app-item>
+  </div>
+</div>
